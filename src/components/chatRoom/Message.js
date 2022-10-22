@@ -11,7 +11,7 @@ const WrapperStyled = styled.div`
     }
     .date {
         margin-left: 10px;
-        font-size: 1.1rem;
+        font-size: 11px;
         color: #a7a7a7;
     }
     .content {
@@ -19,11 +19,11 @@ const WrapperStyled = styled.div`
     }
 `;
 
-export default function Message(text, displayName, createdAt, photoUrl) {
+export default function Message({text, displayName, createdAt, photoURL}) {
   return (
     <WrapperStyled>
         <div>
-            <Avatar src={photoUrl}>A</Avatar>
+            <Avatar size='small'  src={photoURL}>A</Avatar>
             <Typography.Text className='author'>{displayName}</Typography.Text>
             <Typography.Text className='date'>{createdAt}</Typography.Text>
 
